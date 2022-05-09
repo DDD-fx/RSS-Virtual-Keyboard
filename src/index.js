@@ -203,15 +203,19 @@ function langChange() {
   } else if (enUpper[0].hidden === false) {
     enUpperHide();
     ruUpperShow();
+    document.cookie = 'lang=ru';
   } else if (ruUpper[0].hidden === false) {
     ruUpperHide();
     enUpperShow();
+    document.cookie = 'lang=en';
   } else if (enShiftCaps[0].hidden === false) {
     enShiftCapsHide();
     ruShiftCapsShow();
+    document.cookie = 'lang=ru';
   } else if (ruShiftCaps[0].hidden === false) {
     ruShiftCapsHide();
     enShiftCapsShow();
+    document.cookie = 'lang=en';
   }
 }
 function changeLangKey(...codes) {
