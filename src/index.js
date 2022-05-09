@@ -24,12 +24,12 @@ const KEYS = [
   { code: 'Digit0', en: ['0', ')'], ru: ['0', ')'] },
   { code: 'Minus', en: ['-', '_'], ru: ['-', '_', '-'] },
   { code: 'Equal', en: ['=', '+'], ru: ['=', '+', '='] },
-  { code: 'Backspace', en: ['Backspace'], ru: ['Backspace'] }, /*-------------------*/
+  { code: 'Backspace', en: ['Backspace'], ru: ['Backspace'] },
   { code: 'Tab', en: ['Tab'], ru: ['Tab'] },
   { code: 'KeyQ', en: ['q'], ru: ['й'] },
   { code: 'KeyW', en: ['w'], ru: ['ц'] },
   { code: 'KeyE', en: ['e'], ru: ['у'] },
-  { code: 'KeyR', en: ['r'], ru: ['й'] },
+  { code: 'KeyR', en: ['r'], ru: ['к'] },
   { code: 'KeyT', en: ['t'], ru: ['е'] },
   { code: 'KeyY', en: ['y'], ru: ['н'] },
   { code: 'KeyU', en: ['u'], ru: ['г'] },
@@ -39,7 +39,7 @@ const KEYS = [
   { code: 'BracketLeft', en: ['[', '{'], ru: ['х', 'Х', 'Х'] },
   { code: 'BracketRight', en: [']', '}'], ru: ['ъ', 'Ъ', 'Ъ'] },
   { code: 'Backslash', en: ['\\', '|'], ru: ['\\', '/', '\\'] },
-  { code: 'Delete', en: ['Del'], ru: ['Del'] }, /*---------------------*/
+  { code: 'Delete', en: ['Del'], ru: ['Del'] },
   { code: 'CapsLock', en: ['CapsLock'], ru: ['CapsLock'] },
   { code: 'KeyA', en: ['a'], ru: ['ф'] },
   { code: 'KeyS', en: ['s'], ru: ['ы'] },
@@ -52,7 +52,7 @@ const KEYS = [
   { code: 'KeyL', en: ['l'], ru: ['д'] },
   { code: 'Semicolon', en: [';', ':'], ru: ['ж', 'Ж', 'Ж'] },
   { code: 'Quote', en: ["'", '"'], ru: ['э', 'Э', 'Э'] },
-  { code: 'Enter', en: ['Enter'], ru: ['Enter'] }, /*-----------------------*/
+  { code: 'Enter', en: ['Enter'], ru: ['Enter'] },
   { code: 'ShiftLeft', en: ['Shift'], ru: ['Shift'] },
   { code: 'KeyZ', en: ['z'], ru: ['я'] },
   { code: 'KeyX', en: ['x'], ru: ['ч'] },
@@ -65,7 +65,7 @@ const KEYS = [
   { code: 'Period', en: ['.', '>'], ru: ['ю', 'Ю', 'Ю'] },
   { code: 'Slash', en: ['/', '?'], ru: ['.', ',', '.'] },
   { code: 'ArrowUp', en: ['&#x2191', '&#x2191'], ru: ['&#x2191', '&#x2191'] },
-  { code: 'ShiftRight', en: ['Shift'], ru: ['Shift'] }, /*---------------------------*/
+  { code: 'ShiftRight', en: ['Shift'], ru: ['Shift'] },
   { code: 'ControlLeft', en: ['Ctrl'], ru: ['Ctrl'] },
   { code: 'MetaLeft', en: ['Win'], ru: ['Win'] },
   { code: 'AltLeft', en: ['Alt'], ru: ['Alt'] },
