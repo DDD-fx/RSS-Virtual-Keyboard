@@ -6,7 +6,6 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: '[hash].js',
-        assetModuleFilename: 'assets/images/[name][ext]',
         path: path.resolve(__dirname, 'dist'),
         clean: {
             keep: /\.git/,

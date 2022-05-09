@@ -9,7 +9,6 @@
     "start": "webpack serve --open",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix"
-
   },
   "author": "",
   "license": "ISC",
