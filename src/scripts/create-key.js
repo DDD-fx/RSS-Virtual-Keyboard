@@ -120,8 +120,8 @@ export default class CreateKeys {
       appendEn(spanEn);
       [lowerCaseRu.innerHTML, upperCaseRu.innerHTML] = this.ru;
       [shiftCapsRu.innerHTML] = this.ru;
-      const fuckingLint = this.ru[2];
-      capsRu.innerHTML = fuckingLint;
+      const helloLint = this.ru[2];
+      capsRu.innerHTML = helloLint;
       makeHiddenRu();
       appendRu(spanRu);
     }
