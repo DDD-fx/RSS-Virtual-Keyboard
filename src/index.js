@@ -8,7 +8,7 @@ document.body.append(form.elem);
 new CreateNewElem('label', { for: 'textarea', innerHTML: 'Virtual Keyboard' }).append();
 new CreateNewElem('textarea', { name: 'virtual-keyboard', id: 'textarea' }).append();
 new CreateNewElem('div', { id: 'js-keyboard' }).append();
-new CreateNewElem('div', { class: 'disclaimer', innerHTML: '<p>Клавиатура создана в OS Windows</p><p>Комбинация для переключения языка: левыe <b>Ctrl + Alt</b></p>' }).append();
+new CreateNewElem('div', { class: 'disclaimer', innerHTML: '<p>Клавиатура создана в OS Windows</p><p>Комбинация для переключения языка: левыe <b>Ctrl + Alt</b></p><p>Для переключения языка мышью: <b>Win</b></p>' }).append();
 
 const KEYS = [
   { code: 'Backquote', en: ['`', '~'], ru: ['ё', 'Ё', 'Ё'] },
@@ -183,29 +183,39 @@ function ruShiftCapsShow() {
   });
 }
 
-function changeLang(...codes) {
-  function langChange() {
-    if (enCaps[0].hidden === true && ruLower[0].hidden === false) {
-      enLowerShow();
-      ruLowerHide();
-      document.cookie = 'lang=en';
-    } else if (enCaps[0].hidden === false) {
-      enCapsHide();
-      ruCapsShow();
-      document.cookie = 'lang=ru';
-    } else if (ruCaps[0].hidden === true && enLower[0].hidden === false) {
-      ruLowerShow();
-      enLowerHide();
-      document.cookie = 'lang=ru';
-    } else if (ruCaps[0].hidden === false) {
-      ruCapsHide();
-      enCapsShow();
-      document.cookie = 'lang=en';
-    }
+function langChange() {
+  if (enCaps[0].hidden === true && ruLower[0].hidden === false) {
+    enLowerShow();
+    ruLowerHide();
+    document.cookie = 'lang=en';
+  } else if (enCaps[0].hidden === false) {
+    enCapsHide();
+    ruCapsShow();
+    document.cookie = 'lang=ru';
+  } else if (ruCaps[0].hidden === true && enLower[0].hidden === false) {
+    ruLowerShow();
+    enLowerHide();
+    document.cookie = 'lang=ru';
+  } else if (ruCaps[0].hidden === false) {
+    ruCapsHide();
+    enCapsShow();
+    document.cookie = 'lang=en';
+  } else if (enUpper[0].hidden === false) {
+    enUpperHide();
+    ruUpperShow();
+  } else if (ruUpper[0].hidden === false) {
+    ruUpperHide();
+    enUpperShow();
+  } else if (enShiftCaps[0].hidden === false) {
+    enShiftCapsHide();
+    ruShiftCapsShow();
+  } else if (ruShiftCaps[0].hidden === false) {
+    ruShiftCapsHide();
+    enShiftCapsShow();
   }
-
+}
+function changeLangKey(...codes) {
   const pressed = new Set();
-
   document.addEventListener('keydown', (event) => {
     pressed.add(event.code);
     for (let i = 0; i < codes.length; i += 1) {
@@ -221,7 +231,9 @@ function changeLang(...codes) {
   });
 }
 
-changeLang('ControlLeft', 'AltLeft');
+changeLangKey('ControlLeft', 'AltLeft');
+const win = document.getElementById('MetaLeft');
+win.addEventListener('click', langChange);
 
 allKeys.forEach((el) => el.addEventListener('click', () => textArea.focus()));
 
