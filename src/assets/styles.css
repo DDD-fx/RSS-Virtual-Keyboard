@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+body {
+  background-color: #fff9fa;
+  font-family: Courier Prime, serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #004776;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyboard-form {
+  width: 950px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#textarea {
+  min-width: 800px;
+  height: 200px;
+  font-size: 20px;
+  color: #000000;
+}
+#textarea:focus {
+  outline: none;
+}
+
+#js-keyboard {
+  width: 845px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  border: black 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #727272;
+  box-shadow: 3px 5px 25px 14px rgba(13, 13, 13, 0.44);
+  user-select: none;
+}
+
+.disclaimer {
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+}
+
+.key {
+  min-width: 50px;
+  height: 50px;
+  font-size: 22px;
+  line-height: 1.5;
+  background-color: #343536;
+  color: #fff9fa;
+  transition: 0.3s;
+  border-radius: 5px;
+  box-shadow: -1px -1px 1px 1px #1daec5;
+}
+.key:hover {
+  background-color: #001174;
+  cursor: pointer;
+}
+.key span span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.key span [hidden] {
+  display: none !important;
+}
+
+#AltLeft, #AltRight, #ArrowUp, #ArrowLeft, #ArrowDown, #ArrowRight, #Backspace, #CapsLock, #ControlLeft, #ControlRight, #Delete, #Enter, #ShiftLeft, #ShiftRight, #Tab, #MetaLeft {
+  font-weight: 500;
+  font-size: 20px;
+  background-color: #201d1d;
+}
+#AltLeft:hover, #AltRight:hover, #ArrowUp:hover, #ArrowLeft:hover, #ArrowDown:hover, #ArrowRight:hover, #Backspace:hover, #CapsLock:hover, #ControlLeft:hover, #ControlRight:hover, #Delete:hover, #Enter:hover, #ShiftLeft:hover, #ShiftRight:hover, #Tab:hover, #MetaLeft:hover {
+  background-color: #001174;
+}
+
+#Backspace {
+  min-width: 130px;
+}
+
+#Space {
+  min-width: 335px;
+}
+
+#ShiftLeft, #ShiftRight, #CapsLock, #Enter {
+  min-width: 117px;
+}
+
+#ControlLeft {
+  min-width: 77px;
+}
+
+#Delete, #Tab, #ControlRight {
+  min-width: 62px;
+}
+
+#MetaLeft, #AltLeft, #AltRight {
+  min-width: 60px;
+}
+
+#CapsLock[active=true] {
+  background-color: #001174;
+  border-radius: 20px;
+}
+
+#ShiftLeft[active=true], #ShiftRight[active=true] {
+  background-color: #001174;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */
