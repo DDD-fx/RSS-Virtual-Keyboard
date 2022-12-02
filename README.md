@@ -1,2 +1,4 @@
 # RSS-Virtual-Keyboard
-Virtual keyboard for RS School
+
+### Deploy: https://ddd-fx.github.io/RSS-Virtual-Keyboard
+
