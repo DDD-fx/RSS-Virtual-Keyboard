@@ -1,4 +1,4 @@
 # RSS-Virtual-Keyboard
 
-### Deploy: https://ddd-fx.github.io/RSS-Virtual-Keyboard
+### Deploy: https://exochemi.ru/projects/rss-virtual-keyboard/
 
